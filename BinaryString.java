@@ -33,8 +33,12 @@ public class BinaryString {
 		bits[index]=value;
 	}
 	
-	public char get(int index, char value){
+	public char get(int index){
+		try{
 		return bits[index];
+		}catch (RuntimeException e){
+			throw new BinaryStringException();
+		}
 	}
 	
 	public String toString(){
@@ -51,4 +55,3 @@ public class BinaryString {
 	}
 	
 }
-
