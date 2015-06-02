@@ -30,7 +30,11 @@ public class BinaryString {
 	}
 	
 	public void set(int index, char value){
+		try{
 		bits[index]=value;
+		}catch(RuntimeException e){
+			throw new BinaryStringException();
+		}
 	}
 	
 	public char get(int index){
